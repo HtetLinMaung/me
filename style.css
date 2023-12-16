@@ -7,7 +7,6 @@ body {
   background-color: #0e100f;
   color: #fefce1;
   line-height: 1.6;
-  /* padding-top: 13.75rem; */
 }
 .container {
   margin-bottom: 6rem;
@@ -359,3 +358,55 @@ body {
 .github-link svg {
   fill: #333;
 } /* GitHub black */
+
+/* Navigation Bar Styles */
+.navbar {
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #0e100f;
+  z-index: 99;
+  color: #f0f0f0; /* Light text color for contrast */
+  padding: 10px 0; /* Padding for spacing */
+}
+
+.navbar a {
+  /* display: block;  */
+  color: #f0f0f0; /* Light text color for links */
+  padding: 8px 15px; /* Padding for link spacing */
+  text-decoration: none; /* No underline on links */
+  font-size: 16px; /* Font size for links */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+  color: #a8a8a8; /* Slightly lighter color on hover for interactivity */
+}
+
+.navbar .icon {
+  display: none; /* Hide by default */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+  .navbar {
+    display: none; /* Hide all links except the first (hamburger icon) */
+  }
+  .navbar a.icon {
+    float: right; /* Position the hamburger icon to the right */
+    display: block; /* Show the icon */
+  }
+}
+
+/* Class added when navbar is toggled */
+.navbar.responsive {
+  position: relative; /* Adjust position for responsive layout */
+}
+.navbar.responsive a {
+  float: none; /* Disable floating */
+  display: block; /* Display all links in a stack */
+  text-align: left; /* Align text to the left */
+}
